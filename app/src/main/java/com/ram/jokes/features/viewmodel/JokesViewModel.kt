@@ -55,7 +55,7 @@ class JokesViewModel(private val repo: JokesRepo, private val dbDao: JokesDao) :
 
     val countt = viewModelScope.launch() {
         while (isActive) {
-            delay(15 * 1000) // 60*1000 for 1 minute
+            delay(60 * 1000) // 60*1000 for 1 minute
             getJokes()
         }
     }
